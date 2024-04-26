@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Fitness Quiz</h1>
+        <div id="question-container">
+            <div id="question">Question 1: What's your favorite color?</div>
+            <div id="answer-container">
+                <input type="radio" name="question1" id="q1a1" value="1">
+                <label for="q1a1">Blue</label><br>
+                <input type="radio" name="question1" id="q1a2" value="2">
+                <label for="q1a2">Red</label><br>
+                <input type="radio" name="question1" id="q1a3" value="3">
+                <label for="q1a3">Green</label><br>
+                <input type="radio" name="question1" id="q1a4" value="4">
+                <label for="q1a4">Yellow</label><br>
+            </div>
+        </div>
+        <button id="back-btn" style="display: none;">Back</button>
+        <button id="redo-btn" style="display: none;">Redo</button>
+        <button id="next-btn">Next</button>
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
