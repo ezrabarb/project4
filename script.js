@@ -1,33 +1,41 @@
 // Define your questions and corresponding result options
 const questions = [
     {
-        question: "What's your favorite color?",
+        question: "What are your fitness goals?",
         answers: [
-            { option: "Blue", score: 1 },
-            { option: "Red", score: 2 },
-            { option: "Green", score: 3 },
-            { option: "Yellow", score: 4 }
+            { option: "Weight loss", score: 1 },
+            { option: "Muscle gain", score: 2 },
+            { option: "Improved endurance", score: 3 },
+            { option: "Flexibility", score: 4 },
+            { option: "Overall health", score: 5 }
         ]
     },
     {
-        question: "What's your preferred leisure activity?",
+        question: "How much time can you realistically dedicate to exercise each week?",
         answers: [
-            { option: "Reading", score: 1 },
-            { option: "Sports", score: 2 },
-            { option: "Watching movies/TV shows", score: 3 },
-            { option: "Traveling", score: 4 }
+            { option: "Less than 1 hour", score: 1 },
+            { option: "1-3 hours", score: 2 },
+            { option: "3-5 hours", score: 3 },
+            { option: "More than 5 hours", score: 4 }
         ]
     },
     {
-        question: "How do you handle stress?",
+        question: "What's your activity level?",
         answers: [
-            { option: "Take deep breaths and relax", score: 1 },
-            { option: "Exercise or engage in physical activity", score: 2 },
-            { option: "Talk to friends or family", score: 3 },
-            { option: "Plan a getaway or take a vacation", score: 4 }
+            { option: "Sedentary (little to no exercise)", score: 1 },
+            { option: "Lightly active (light exercise/sports 1-3 days a week)", score: 2 },
+            { option: "Moderately active (moderate exercise/sports 3-5 days a week)", score: 3 },
+            { option: "Very active (hard exercise/sports 6-7 days a week)", score: 4 },
+            { option: "Extra active (very hard exercise/sports & physical job or 2x training)", score: 5 }
+        ]
+    },
+    {
+        question: "Are you familiar with gym equipment?",
+        answers: [
+            { option: "Yes", score: 1 },
+            { option: "No", score: 2 }
         ]
     }
-    // Add more questions here if needed
 ];
 
 let currentQuestion = 0;
@@ -57,14 +65,12 @@ function displayQuestion() {
 function calculateResult() {
     // Define your result interpretation based on the total score
     let result = '';
-    if (totalScore <= 4) {
-        result = "You're calm and collected.";
-    } else if (totalScore <= 8) {
-        result = "You're passionate and energetic.";
-    } else if (totalScore <= 12) {
-        result = "You're peaceful and harmonious.";
+    if (totalScore <= 5) {
+        result = "Your fitness level is beginner. Consider starting with light exercises and gradually increase intensity.";
+    } else if (totalScore <= 10) {
+        result = "Your fitness level is intermediate. You're ready for moderate workouts to challenge yourself.";
     } else {
-        result = "You're cheerful and optimistic.";
+        result = "Your fitness level is advanced. You can handle intense workouts to push your limits.";
     }
     resultContainer.textContent = result;
 }
