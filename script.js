@@ -63,17 +63,35 @@ function displayQuestion() {
 
 // Function to calculate the result based on the total score
 function calculateResult() {
-    // Define your result interpretation based on the total score
     let result = '';
     if (totalScore <= 5) {
-        result = "Your fitness level is beginner. Consider starting with light exercises and gradually increase intensity.";
+        result = "Your fitness level is beginner. Here are some recommended workouts:\n\n" +
+                 "1. Beginner's Full Body Workout:\n" +
+                 "- Squats: 3 sets of 10 reps\n" +
+                 "- Push-ups: 3 sets of 8 reps\n" +
+                 "- Lunges: 3 sets of 10 reps per leg\n\n" +
+                 "2. Cardio: 20 minutes of brisk walking or cycling\n\n" +
+                 "Remember to start with light exercises and gradually increase intensity.";
     } else if (totalScore <= 10) {
-        result = "Your fitness level is intermediate. You're ready for moderate workouts to challenge yourself.";
+        result = "Your fitness level is intermediate. Here are some recommended workouts:\n\n" +
+                 "1. Intermediate Full Body Workout:\n" +
+                 "- Deadlifts: 4 sets of 8 reps\n" +
+                 "- Pull-ups: 3 sets of 6 reps\n" +
+                 "- Planks: 3 sets of 30 seconds\n\n" +
+                 "2. Cardio: 30 minutes of jogging or swimming\n\n" +
+                 "You're ready for moderate workouts to challenge yourself.";
     } else {
-        result = "Your fitness level is advanced. You can handle intense workouts to push your limits.";
+        result = "Your fitness level is advanced. Here are some recommended workouts:\n\n" +
+                 "1. Advanced Full Body Workout:\n" +
+                 "- Squat jumps: 4 sets of 10 reps\n" +
+                 "- Bench press: 4 sets of 8 reps\n" +
+                 "- Burpees: 3 sets of 12 reps\n\n" +
+                 "2. Cardio: 40 minutes of high-intensity interval training (HIIT)\n\n" +
+                 "You can handle intense workouts to push your limits.";
     }
     resultContainer.textContent = result;
 }
+
 
 // Event listener for the "Next" button click
 nextButton.addEventListener('click', function() {
